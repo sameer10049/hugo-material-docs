@@ -31,7 +31,7 @@ podTemplate(label: 'pod-hugo-app', containers: [
 //                }
 //            }
 
-            container('docker') {
+/*            container('docker') {
                 stage('Docker Build & Push Current & Latest Versions') {
                     sh ("docker build -t ${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER} .")
                     sh ("docker push ${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}")
@@ -45,7 +45,7 @@ podTemplate(label: 'pod-hugo-app', containers: [
                     sh ("kubectl set image deployment/${K8S_DEPLOYMENT_NAME} ${K8S_DEPLOYMENT_NAME}=${DOCKER_HUB_ACCOUNT}/${DOCKER_IMAGE_NAME}:${env.BUILD_NUMBER}")
                 }
             } 
-
+*/
         }        
     }
 }
