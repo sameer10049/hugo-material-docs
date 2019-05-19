@@ -25,11 +25,11 @@ podTemplate(label: 'pod-hugo-app', containers: [
                 }
             }
     
-            container('html-proofer') {
-                stage('Validate HTML') {
-                    sh ("htmlproofer public --internal-domains ${env.JOB_NAME} --external_only --only-4xx")
-                }
-            }
+//            container('html-proofer') {
+//                stage('Validate HTML') {
+//                    sh ("htmlproofer public --internal-domains ${env.JOB_NAME} --external_only --only-4xx")
+//                }
+//            }
 
             container('docker') {
                 stage('Docker Build & Push Current & Latest Versions') {
